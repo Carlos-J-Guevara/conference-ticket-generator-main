@@ -57,7 +57,7 @@
       color:white;
       font-size: 5vw;
       margin-top: 10vw;
-      margin-left: 5vw;
+      margin-left: 3vw;
       font-weight: 400;
     }
   
@@ -115,6 +115,50 @@
       color: #B5B4C5;
       transform: translate(9vw,-4.5vw);
       font-size: 3vw;
+    }
+
+    .full_name h2{
+      color:white;
+      font-size: 5vw;
+      margin-top: 3vw;
+      margin-left: 3vw;
+      font-weight: 400;
+    }
+
+    .full_name input{
+      width: 94vw;
+      height: 14vw;
+      margin: 3vw;
+      border-radius: 2vw;
+      border: 0.3vw solid #464477;
+      background-color: rgba(58, 57, 57, 0.3);
+      color: white;
+      font-size: 4vw;
+      padding-left: 2vw;
+    }
+     
+    .email_address h2{
+      color:white;
+      font-size: 5vw;
+      margin-top: 3vw;
+      margin-left: 3vw;
+      font-weight: 400;
+    }
+
+    .email_address input{
+      width: 94vw;
+      height: 14vw;
+      margin: 3vw;
+      border-radius: 2vw;
+      border: 0.3vw solid #464477;
+      background-color: rgba(58, 57, 57, 0.3);
+      color: white;
+      font-size: 4vw;
+      padding-left: 2vw;
+    }
+
+    .email_address input::placeholder{
+      padding-left: 1vw;
     }
   }
 
