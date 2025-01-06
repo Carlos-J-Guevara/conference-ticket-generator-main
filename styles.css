@@ -160,6 +160,62 @@
     .email_address input::placeholder{
       padding-left: 1vw;
     }
+  
+    .github_username h2{
+      color:white;
+      font-size: 5vw;
+      margin-top: 3vw;
+      margin-left: 3vw;
+      font-weight: 400;
+    }
+
+    .github_username input{
+      width: 94vw;
+      height: 14vw;
+      margin: 3vw;
+      border-radius: 2vw;
+      border: 0.3vw solid #464477;
+      background-color: rgba(58, 57, 57, 0.3);
+      color: white;
+      font-size: 4vw;
+      padding-left: 3vw;
+    }
+
+    .generate_botom button{
+      width: 94vw;
+      height: 14vw;
+      margin: 3vw;
+      border-radius: 2vw;
+      background-color: #F67464;
+      padding-left: 3vw;
+      border: 0.3vw solid #F67464;
+    }
+    
+    .generate_botom button span{
+      color: #26020F;
+      font-size: 5vw;
+      font-family: 'Inconsolata';
+      font-weight: bold;
+    }
+    
+    footer {
+      display: flex;
+      justify-content: center; /* Centra el contenido horizontalmente */
+      align-items: center; 
+      text-align: center; 
+      color: white; 
+      font-size: 2vw; 
+      padding: 1vw; 
+  }
+  
+  footer a {
+      color: white; 
+      text-decoration: none; 
+  }
+  
+  footer a:hover {
+      text-decoration: underline; 
+  }
   }
 
 
