@@ -217,5 +217,212 @@
       text-decoration: underline; 
   }
   }
+  
+  /* #####################layout of form desktop view##################### */
+  @media (min-width: 375px){
+    body {
+      background-image: url('assets/images/background-mobile.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
 
+    /* styles of header  */
+    header{
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;  
+    }
+
+    header img{
+      width: 15vw;
+      margin: 8vw;
+      margin-bottom: 3vw;
+      margin-top: 4vw;
+    }
+    
+    header h1{
+      color: white;
+      font-size: 4vw;
+      max-width: 60vw;
+      margin: 2vw;
+      margin-bottom: 0vw;
+    }
+
+    header h2{
+      color: #B5B4C5;
+      margin-top: 2vw;
+      font-size: 1.5VW;
+      margin-bottom: 2vw;
+      margin-left: 2vw; 
+      margin-right: 2vw;
+    }
+  
+    /* styles of upload avatar */
+    .avatar_upload h2 {
+      color:white;
+      font-size: 5vw;
+      margin-top: 10vw;
+      margin-left: 3vw;
+      font-weight: 400;
+    }
+  
+    #uploadButton {
+      background-color: rgba(58, 57, 57, 0.3);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      position: absolute;
+      transform: translate(3.5vw,3.5vw);
+      width: 93vw;  
+      height: 32vw; 
+      border-radius: 2vw;
+      border:0.1vw dashed #464477;
+    }
+
+    .avatar_upload button img{
+      border: 2px solid #464477;
+      border-radius: 30%;
+      background-color: rgba(108, 108, 108, 0.3);
+      width: 14vw;
+      transform: translate(0vw,-2vw);
+      padding: 3vw;
+    }
+
+    .avatar_upload button span{
+      font-size: 5vw;
+      color: #B5B4C5;
+      transform: translate(0vw,2vw);
+      font-family: 'Inconsolata';
+    }
+
+    #uploadButton:hover{
+      background-color: rgba(58, 57, 57, 0.5); 
+  }
+    
+    #dropArea {
+      border: 0.6vw dashed #464477;
+      text-align: center;
+      z-index: 0;
+      box-sizing: border-box;
+      width: 94vw;
+      height: 33vw;
+      margin: 3vw;
+      border-radius: 2vw;
+    }
+
+    #infoiconupload{
+      margin-left: 3vw;
+    }
+
+    .avatar_upload h4{
+      color: #B5B4C5;
+      transform: translate(9vw,-4.5vw);
+      font-size: 3vw;
+    }
+
+    .full_name h2{
+      color:white;
+      font-size: 5vw;
+      margin-top: 3vw;
+      margin-left: 3vw;
+      font-weight: 400;
+    }
+
+    .full_name input{
+      width: 94vw;
+      height: 14vw;
+      margin: 3vw;
+      border-radius: 2vw;
+      border: 0.3vw solid #464477;
+      background-color: rgba(58, 57, 57, 0.3);
+      color: white;
+      font-size: 4vw;
+      padding-left: 2vw;
+    }
+     
+    .email_address h2{
+      color:white;
+      font-size: 5vw;
+      margin-top: 3vw;
+      margin-left: 3vw;
+      font-weight: 400;
+    }
+
+    .email_address input{
+      width: 94vw;
+      height: 14vw;
+      margin: 3vw;
+      border-radius: 2vw;
+      border: 0.3vw solid #464477;
+      background-color: rgba(58, 57, 57, 0.3);
+      color: white;
+      font-size: 4vw;
+      padding-left: 2vw;
+    }
+
+    .email_address input::placeholder{
+      padding-left: 1vw;
+    }
+  
+    .github_username h2{
+      color:white;
+      font-size: 5vw;
+      margin-top: 3vw;
+      margin-left: 3vw;
+      font-weight: 400;
+    }
+
+    .github_username input{
+      width: 94vw;
+      height: 14vw;
+      margin: 3vw;
+      border-radius: 2vw;
+      border: 0.3vw solid #464477;
+      background-color: rgba(58, 57, 57, 0.3);
+      color: white;
+      font-size: 4vw;
+      padding-left: 3vw;
+    }
+
+    .generate_botom button{
+      width: 94vw;
+      height: 14vw;
+      margin: 3vw;
+      border-radius: 2vw;
+      background-color: #F67464;
+      padding-left: 3vw;
+      border: 0.3vw solid #F67464;
+    }
+    
+    .generate_botom button span{
+      color: #26020F;
+      font-size: 5vw;
+      font-family: 'Inconsolata';
+      font-weight: bold;
+    }
+    
+    footer {
+      display: flex;
+      justify-content: center; /* Centra el contenido horizontalmente */
+      align-items: center; 
+      text-align: center; 
+      color: white; 
+      font-size: 2vw; 
+      padding: 1vw; 
+  }
+  
+  footer a {
+      color: white; 
+      text-decoration: none; 
+  }
+  
+  footer a:hover {
+      text-decoration: underline; 
+  }
+  }
 
