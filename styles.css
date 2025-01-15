@@ -197,6 +197,10 @@
       font-family: 'Inconsolata';
       font-weight: bold;
     }
+
+    .generate_botom button:active {
+      background-color: #F8BABA; /* Color más claro al hacer clic */
+  }
     
     footer {
       display: flex;
@@ -263,9 +267,9 @@
     /* styles of upload avatar */
     .avatar_upload h2 {
       color:white;
-      font-size: 5vw;
-      margin-top: 10vw;
-      margin-left: 3vw;
+      font-size: 1.5vw;
+      margin-top: 1vw;
+      margin-left: 34.6vw;
       font-weight: 400;
     }
   
@@ -277,26 +281,26 @@
       align-items: center;
       z-index: 1;
       position: absolute;
-      transform: translate(3.5vw,3.5vw);
-      width: 93vw;  
-      height: 32vw; 
-      border-radius: 2vw;
-      border:0.1vw dashed #464477;
+      transform: translate(34.6vw,1.1vw);
+      width: 30.8vw;  
+      height: 8.8vw;
+      border-radius: 1vw;
+      border:0.1vw none #464477;
     }
 
     .avatar_upload button img{
-      border: 2px solid #464477;
-      border-radius: 30%;
+      border: 1px solid #4c4b81;
+      border-radius: 1vw;
       background-color: rgba(108, 108, 108, 0.3);
-      width: 14vw;
-      transform: translate(0vw,-2vw);
-      padding: 3vw;
+      width: 3.5vw;
+      transform: translate(0vw,-0.9vw);
+      padding: 0.6vw;
     }
 
     .avatar_upload button span{
-      font-size: 5vw;
+      font-size: 1.1vw;
       color: #B5B4C5;
-      transform: translate(0vw,2vw);
+      transform: translate(0vw,0.5vw);
       font-family: 'Inconsolata';
     }
 
@@ -305,24 +309,27 @@
   }
     
     #dropArea {
-      border: 0.6vw dashed #464477;
+      border: 0.15vw dashed #525089;
       text-align: center;
       z-index: 0;
       box-sizing: border-box;
-      width: 94vw;
-      height: 33vw;
+      width: 31vw;
+      height: 9vw;
       margin: 3vw;
-      border-radius: 2vw;
+      border-radius: 1vw;
+      margin-left: 34.5vw;
+      margin-top: 1vw;
     }
 
     #infoiconupload{
-      margin-left: 3vw;
+      transform: translate(34.5vw, -2.4vw);
+      width: 1vw;
     }
 
     .avatar_upload h4{
       color: #B5B4C5;
-      transform: translate(9vw,-4.5vw);
-      font-size: 3vw;
+      transform: translate(36.5vw,-3.5vw);
+      font-size: 0.7vw;
     }
 
     .full_name h2{
@@ -406,6 +413,11 @@
       font-weight: bold;
     }
     
+    .generate_botom button:active {
+      background-color: #F8BABA; /* Color más claro al hacer clic */
+  }
+    
+
     footer {
       display: flex;
       justify-content: center; /* Centra el contenido horizontalmente */
