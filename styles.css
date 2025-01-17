@@ -117,6 +117,7 @@
       font-size: 3vw;
     }
 
+    /*styles of upload full name*/
     .full_name h2{
       color:white;
       font-size: 5vw;
@@ -133,10 +134,11 @@
       border: 0.3vw solid #464477;
       background-color: rgba(58, 57, 57, 0.3);
       color: white;
-      font-size: 4vw;
-      padding-left: 2vw;
+      font-size: 3vw;
+      padding-left: 1vw;
     }
-     
+
+    /*styles of email address*/
     .email_address h2{
       color:white;
       font-size: 5vw;
@@ -153,14 +155,15 @@
       border: 0.3vw solid #464477;
       background-color: rgba(58, 57, 57, 0.3);
       color: white;
-      font-size: 4vw;
-      padding-left: 2vw;
+      font-size: 3vw;
+      padding-left: 1vw;
     }
 
     .email_address input::placeholder{
       padding-left: 1vw;
     }
   
+    /*styles of github username*/
     .github_username h2{
       color:white;
       font-size: 5vw;
@@ -177,10 +180,11 @@
       border: 0.3vw solid #464477;
       background-color: rgba(58, 57, 57, 0.3);
       color: white;
-      font-size: 4vw;
-      padding-left: 3vw;
+      font-size: 3vw;
+      padding-left: 1vw;
     }
 
+    /*styles of botom*/
     .generate_botom button{
       width: 94vw;
       height: 14vw;
@@ -197,10 +201,15 @@
       font-family: 'Inconsolata';
       font-weight: bold;
     }
+
+    .generate_botom button:active {
+      background-color: #F8BABA; 
+  }
     
+    /*styles of footer*/
     footer {
       display: flex;
-      justify-content: center; /* Centra el contenido horizontalmente */
+      justify-content: center; 
       align-items: center; 
       text-align: center; 
       color: white; 
@@ -217,5 +226,230 @@
       text-decoration: underline; 
   }
   }
+  
+  /* layout of form desktop view*/
+  @media (min-width: 375px){
+    body {
+      background-image: url('assets/images/background-mobile.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
 
+    /* styles of header  */
+    header{
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;  
+    }
+
+    header img{
+      width: 15vw;
+      margin: 8vw;
+      margin-bottom: 3vw;
+      margin-top: 4vw;
+    }
+    
+    header h1{
+      color: white;
+      font-size: 4vw;
+      max-width: 60vw;
+      margin: 2vw;
+      margin-bottom: 0vw;
+    }
+
+    header h2{
+      color: #B5B4C5;
+      margin-top: 2vw;
+      font-size: 1.5VW;
+      margin-bottom: 2vw;
+      margin-left: 2vw; 
+      margin-right: 2vw;
+    }
+  
+    /* styles of upload avatar */
+    .avatar_upload h2 {
+      color:white;
+      font-size: 1.5vw;
+      margin-top: 1vw;
+      margin-left: 34.6vw;
+      font-weight: 400;
+    }
+  
+    #uploadButton {
+      background-color: rgba(58, 57, 57, 0.3);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      position: absolute;
+      transform: translate(34.6vw,1.1vw);
+      width: 30.8vw;  
+      height: 8.8vw;
+      border-radius: 1vw;
+      border:0.1vw none #464477;
+    }
+
+    .avatar_upload button img{
+      border: 1px solid #4c4b81;
+      border-radius: 1vw;
+      background-color: rgba(108, 108, 108, 0.3);
+      width: 3.5vw;
+      transform: translate(0vw,-0.9vw);
+      padding: 0.6vw;
+    }
+
+    .avatar_upload button span{
+      font-size: 1.1vw;
+      color: #B5B4C5;
+      transform: translate(0vw,0.5vw);
+      font-family: 'Inconsolata';
+    }
+
+    #uploadButton:hover{
+      background-color: rgba(58, 57, 57, 0.5); 
+  }
+    
+    #dropArea {
+      border: 0.15vw dashed #525089;
+      text-align: center;
+      z-index: 0;
+      box-sizing: border-box;
+      width: 31vw;
+      height: 9vw;
+      margin: 3vw;
+      border-radius: 1vw;
+      margin-left: 34.5vw;
+      margin-top: 1vw;
+    }
+
+    #infoiconupload{
+      transform: translate(34.5vw, -2.4vw);
+      width: 1vw;
+    }
+
+    .avatar_upload h4{
+      color: #B5B4C5;
+      transform: translate(36.5vw,-3.5vw);
+      font-size: 0.7vw;
+    }
+
+    /*styles of upload full name*/
+    .full_name h2{
+      color:white;
+      font-size: 1.5vw;
+      margin-left: 34.6vw;
+      font-weight: 400;
+      transform: translate(0vw,-1vw);
+    }
+
+    .full_name input{
+      width: 31vw;
+      height: 5vw;
+      margin-left: 34.5vw;
+      border-radius: 1vw;
+      border: 0.1vw solid #525089;
+      background-color: rgba(58, 57, 57, 0.3);
+      color: white;
+      padding-left: 1vw;
+      font-size: 1vw;
+    }
+     
+    /*styles of email address*/
+    .email_address h2{
+      color:white;
+      font-size: 1.5vw;
+      margin-left: 34.6vw;
+      font-weight: 400;
+      margin-top: 2.5vw;
+      margin-bottom: 1vw;
+    }
+
+    .email_address input{
+      width: 31vw;
+      height: 5vw;
+      margin-left: 34.5vw;
+      border-radius: 1vw;
+      border: 0.1vw solid #525089;
+      background-color: rgba(58, 57, 57, 0.3);
+      color: white;
+      padding-left: 1vw;
+      font-size: 1vw;
+    }
+
+    .email_address input::placeholder{
+      padding-left: 1vw;
+    }
+  
+    /*styles of github username*/
+    .github_username h2{
+      color:white;
+      font-size: 1.5vw;
+      margin-left: 34.6vw;
+      font-weight: 400;
+      margin-top: 2.5vw;
+      margin-bottom: 1vw;
+    }
+
+    .github_username input{
+      width: 31vw;
+      height: 5vw;
+      margin-left: 34.5vw;
+      border-radius: 1vw;
+      border: 0.1vw solid #525089;
+      background-color: rgba(58, 57, 57, 0.3);
+      color: white;
+      padding-left: 1vw;
+      font-size: 1vw;
+    }
+
+    .github_username input::placeholder{
+      padding-left: 1vw;
+    }
+
+    /*styles of botom*/
+    .generate_botom button{
+      width: 31vw;
+      height: 5vw;
+      margin-left: 34.5vw;
+      margin-top: 2vw;
+      border-radius: 1vw;
+      background-color: #F67464;
+      border: 0.3vw solid #F67464;
+    }
+    
+    .generate_botom button span{
+      color: #26020F;
+      font-size: 1.5vw;
+      font-family: 'Inconsolata';
+      font-weight: bold;
+    }
+    
+    .generate_botom button:active {
+      background-color: #F8BABA; 
+  }
+    
+    /*styles of footer*/
+    footer {
+      display: flex;
+      justify-content: center; /* Centra el contenido horizontalmente */
+      align-items: center; 
+      text-align: center; 
+      color: white; 
+      font-size: 0.7vw; 
+      padding: 1vw; 
+  }
+  
+  footer a {
+      color: white; 
+      text-decoration: none; 
+  }
+  
+  footer a:hover {
+      text-decoration: underline; 
+  }
+  }
 
