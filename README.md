@@ -1,2 +1,2 @@
-Este es un proyecto de practica de Frontend Mentor
+<!-- Este es un proyecto de practica de Frontend Mentor -->
 
