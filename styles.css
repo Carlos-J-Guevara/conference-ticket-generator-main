@@ -117,6 +117,7 @@
       font-size: 3vw;
     }
 
+    /*styles of upload full name*/
     .full_name h2{
       color:white;
       font-size: 5vw;
@@ -133,10 +134,11 @@
       border: 0.3vw solid #464477;
       background-color: rgba(58, 57, 57, 0.3);
       color: white;
-      font-size: 4vw;
-      padding-left: 2vw;
+      font-size: 3vw;
+      padding-left: 1vw;
     }
-     
+
+    /*styles of email address*/
     .email_address h2{
       color:white;
       font-size: 5vw;
@@ -153,14 +155,15 @@
       border: 0.3vw solid #464477;
       background-color: rgba(58, 57, 57, 0.3);
       color: white;
-      font-size: 4vw;
-      padding-left: 2vw;
+      font-size: 3vw;
+      padding-left: 1vw;
     }
 
     .email_address input::placeholder{
       padding-left: 1vw;
     }
   
+    /*styles of github username*/
     .github_username h2{
       color:white;
       font-size: 5vw;
@@ -177,10 +180,11 @@
       border: 0.3vw solid #464477;
       background-color: rgba(58, 57, 57, 0.3);
       color: white;
-      font-size: 4vw;
-      padding-left: 3vw;
+      font-size: 3vw;
+      padding-left: 1vw;
     }
 
+    /*styles of botom*/
     .generate_botom button{
       width: 94vw;
       height: 14vw;
@@ -199,12 +203,13 @@
     }
 
     .generate_botom button:active {
-      background-color: #F8BABA; /* Color más claro al hacer clic */
+      background-color: #F8BABA; 
   }
     
+    /*styles of footer*/
     footer {
       display: flex;
-      justify-content: center; /* Centra el contenido horizontalmente */
+      justify-content: center; 
       align-items: center; 
       text-align: center; 
       color: white; 
@@ -222,7 +227,7 @@
   }
   }
   
-  /* #####################layout of form desktop view##################### */
+  /* layout of form desktop view*/
   @media (min-width: 375px){
     body {
       background-image: url('assets/images/background-mobile.png');
@@ -332,99 +337,109 @@
       font-size: 0.7vw;
     }
 
+    /*styles of upload full name*/
     .full_name h2{
       color:white;
-      font-size: 5vw;
-      margin-top: 3vw;
-      margin-left: 3vw;
+      font-size: 1.5vw;
+      margin-left: 34.6vw;
       font-weight: 400;
+      transform: translate(0vw,-1vw);
     }
 
     .full_name input{
-      width: 94vw;
-      height: 14vw;
-      margin: 3vw;
-      border-radius: 2vw;
-      border: 0.3vw solid #464477;
+      width: 31vw;
+      height: 5vw;
+      margin-left: 34.5vw;
+      border-radius: 1vw;
+      border: 0.1vw solid #525089;
       background-color: rgba(58, 57, 57, 0.3);
       color: white;
-      font-size: 4vw;
-      padding-left: 2vw;
+      padding-left: 1vw;
+      font-size: 1vw;
     }
      
+    /*styles of email address*/
     .email_address h2{
       color:white;
-      font-size: 5vw;
-      margin-top: 3vw;
-      margin-left: 3vw;
+      font-size: 1.5vw;
+      margin-left: 34.6vw;
       font-weight: 400;
+      margin-top: 2.5vw;
+      margin-bottom: 1vw;
     }
 
     .email_address input{
-      width: 94vw;
-      height: 14vw;
-      margin: 3vw;
-      border-radius: 2vw;
-      border: 0.3vw solid #464477;
+      width: 31vw;
+      height: 5vw;
+      margin-left: 34.5vw;
+      border-radius: 1vw;
+      border: 0.1vw solid #525089;
       background-color: rgba(58, 57, 57, 0.3);
       color: white;
-      font-size: 4vw;
-      padding-left: 2vw;
+      padding-left: 1vw;
+      font-size: 1vw;
     }
 
     .email_address input::placeholder{
       padding-left: 1vw;
     }
   
+    /*styles of github username*/
     .github_username h2{
       color:white;
-      font-size: 5vw;
-      margin-top: 3vw;
-      margin-left: 3vw;
+      font-size: 1.5vw;
+      margin-left: 34.6vw;
       font-weight: 400;
+      margin-top: 2.5vw;
+      margin-bottom: 1vw;
     }
 
     .github_username input{
-      width: 94vw;
-      height: 14vw;
-      margin: 3vw;
-      border-radius: 2vw;
-      border: 0.3vw solid #464477;
+      width: 31vw;
+      height: 5vw;
+      margin-left: 34.5vw;
+      border-radius: 1vw;
+      border: 0.1vw solid #525089;
       background-color: rgba(58, 57, 57, 0.3);
       color: white;
-      font-size: 4vw;
-      padding-left: 3vw;
+      padding-left: 1vw;
+      font-size: 1vw;
     }
 
+    .github_username input::placeholder{
+      padding-left: 1vw;
+    }
+
+    /*styles of botom*/
     .generate_botom button{
-      width: 94vw;
-      height: 14vw;
-      margin: 3vw;
-      border-radius: 2vw;
+      width: 31vw;
+      height: 5vw;
+      margin-left: 34.5vw;
+      margin-top: 2vw;
+      border-radius: 1vw;
       background-color: #F67464;
-      padding-left: 3vw;
       border: 0.3vw solid #F67464;
     }
     
     .generate_botom button span{
       color: #26020F;
-      font-size: 5vw;
+      font-size: 1.5vw;
       font-family: 'Inconsolata';
       font-weight: bold;
     }
     
     .generate_botom button:active {
-      background-color: #F8BABA; /* Color más claro al hacer clic */
+      background-color: #F8BABA; 
   }
     
-
+    /*styles of footer*/
     footer {
       display: flex;
       justify-content: center; /* Centra el contenido horizontalmente */
       align-items: center; 
       text-align: center; 
       color: white; 
-      font-size: 2vw; 
+      font-size: 0.7vw; 
       padding: 1vw; 
   }
   
