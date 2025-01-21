@@ -364,22 +364,19 @@
       color: white;
       padding-left: 1vw;
       font-size: 1vw;
+      z-index: 1;
+      box-sizing: border-box;
     }
     
     .full_name input:focus{
-      outline: none;
+      outline: 0.1vw double white;
+      outline-offset: 0.4vw;
     }
 
-
-    .full_name div:focus{
-      width: 32vw;
-      height: 6vw;
-      margin-left: 34.5vw;
-      border-radius: 1vw;
-      border: 0.1vw solid white;
-      background-color: rgba(58, 57, 57, 0.3);
-    }  
-
+    .full_name input:hover{
+      background-color: #1F1E33;
+    }
+  
     /*styles of email address*/
     .email_address h2{
       color:white;
@@ -404,6 +401,15 @@
 
     .email_address input::placeholder{
       padding-left: 1vw;
+    }
+
+    .email_address input:focus{
+      outline: 0.1vw double white;
+      outline-offset: 0.4vw;
+    }
+
+    .email_address input:hover{
+      background-color: #1F1E33;
     }
   
     /*styles of github username*/
@@ -430,6 +436,15 @@
 
     .github_username input::placeholder{
       padding-left: 1vw;
+    }
+
+    .github_username input:focus{
+      outline: 0.1vw double white;
+      outline-offset: 0.4vw;
+    }
+
+    .github_username input:hover{
+      background-color: #1F1E33;
     }
 
     /*styles of botom*/
