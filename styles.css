@@ -278,7 +278,7 @@
       font-weight: 400;
     }
   
-    #uploadButton {
+    #uploadButton{
       background-color: rgba(58, 57, 57, 0.3);
       display: flex;
       flex-direction: column;
@@ -298,7 +298,7 @@
       border-radius: 1vw;
       background-color: rgba(108, 108, 108, 0.3);
       width: 3.5vw;
-      transform: translate(0vw,-0.9vw);
+      transform: translate(0vw,-1.5vw);
       padding: 0.6vw;
     }
 
@@ -311,8 +311,16 @@
 
     #uploadButton:hover{
       background-color: rgba(58, 57, 57, 0.5); 
-  }
+    }
     
+    #uploadButton:focus{
+      width: 31.8vw;  
+      height: 9.8vw;
+      border-radius: 1vw;
+      border:0.1vw solid white;
+      transform: translate(34.1vw,0.65vw);
+    }
+
     #dropArea {
       border: 0.15vw dashed #525089;
       text-align: center;
@@ -356,8 +364,19 @@
       color: white;
       padding-left: 1vw;
       font-size: 1vw;
+      z-index: 1;
+      box-sizing: border-box;
     }
-     
+    
+    .full_name input:focus{
+      outline: 0.1vw double white;
+      outline-offset: 0.4vw;
+    }
+
+    .full_name input:hover{
+      background-color: #1F1E33;
+    }
+  
     /*styles of email address*/
     .email_address h2{
       color:white;
@@ -382,6 +401,15 @@
 
     .email_address input::placeholder{
       padding-left: 1vw;
+    }
+
+    .email_address input:focus{
+      outline: 0.1vw double white;
+      outline-offset: 0.4vw;
+    }
+
+    .email_address input:hover{
+      background-color: #1F1E33;
     }
   
     /*styles of github username*/
@@ -408,6 +436,15 @@
 
     .github_username input::placeholder{
       padding-left: 1vw;
+    }
+
+    .github_username input:focus{
+      outline: 0.1vw double white;
+      outline-offset: 0.4vw;
+    }
+
+    .github_username input:hover{
+      background-color: #1F1E33;
     }
 
     /*styles of botom*/
