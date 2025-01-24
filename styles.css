@@ -149,7 +149,7 @@
     }
 
     .full_name input:focus{
-      outline: 0.1vw double white;
+      outline: 0.1vw solid white;
       outline-offset: 1vw;
     }
 
@@ -183,7 +183,7 @@
     }
 
     .email_address input:focus{
-      outline: 0.1vw double white;
+      outline: 0.1vw solid white;
       outline-offset: 1vw;
     }
 
@@ -213,7 +213,7 @@
     }
 
     .github_username input:focus{
-      outline: 0.1vw double white;
+      outline: 0.1vw solid white;
       outline-offset: 1vw;
     }
 
@@ -406,7 +406,7 @@
     }
     
     .full_name input:focus{
-      outline: 0.1vw double white;
+      outline: 0.1vw solid white;
       outline-offset: 0.4vw;
     }
 
@@ -441,7 +441,7 @@
     }
 
     .email_address input:focus{
-      outline: 0.1vw double white;
+      outline: 0.1vw solid white;
       outline-offset: 0.4vw;
     }
 
@@ -476,7 +476,7 @@
     }
 
     .github_username input:focus{
-      outline: 0.1vw double white;
+      outline: 0.1vw solid white;
       outline-offset: 0.4vw;
     }
 
