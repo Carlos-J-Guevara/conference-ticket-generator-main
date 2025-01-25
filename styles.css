@@ -265,7 +265,7 @@
   }
   
   /* layout of form desktop view*/
-  @media (min-width: 375px){
+  @media (min-width: 376px){
     body {
       background-image: url('assets/images/background-mobile.png');
       background-size: cover;
