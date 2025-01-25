@@ -15,12 +15,13 @@
   /* form both layouts - first mobile - desktop view*/
   
   /* layoout of form mobile view */
-  @media (max-width: 375px) {
+  @media (max-width: 480px) {
     body {
       background-image: url('assets/images/background-mobile.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      min-height: 100vh;
     }
 
     /* styles of header  */
@@ -265,12 +266,13 @@
   }
   
   /* layout of form desktop view*/
-  @media (min-width: 376px){
+  @media (min-width: 481px){
     body {
       background-image: url('assets/images/background-mobile.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      min-height: 100vh;
     }
 
     /* styles of header  */
