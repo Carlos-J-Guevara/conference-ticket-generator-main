@@ -1,0 +1,11 @@
+js:
+*state-error.jpg
+*state-form-complete-desktop.jpg (the face of who upload the avatar)
+*state-form-complete-mobile.jpg.(only the face of who upload the avatar)
+
+css:
+*state-focus.jpg
+*state-form-complete-desktop.jpg
+*state-form-complete-mobile.jpg.
+*state-hover.jpg. 
+
