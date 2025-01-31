@@ -1,0 +1,14 @@
+node_modules
+dist
+build
+normalize.css
+.htmlhintrc
+.prettierrc
+.stylelintrc.json
+package-lock.json
+package.json
+README.md
+tsconfig.json
+eslint.config.mjs
+style-guide.md
+settings.json
