@@ -16,7 +16,7 @@ body {
 /* layoout of form mobile view */
 @media only screen and (max-width: 480px) {
   body {
-    background-image: url('assets/images/background-mobile.png');
+    background-image: url('design/mobile/desing_original.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -212,7 +212,7 @@ body {
     background-color: rgba(58, 57, 57, 0.3);
     color: white;
     font-size: 3vw;
-    padding-left: 1vw;
+    padding-left: 1.5vw;
   }
 
   .github_username input:focus {
@@ -270,7 +270,7 @@ body {
 /* styles of tablet view */
 @media screen and (min-width: 481px) and (max-width: 600px) {
   body {
-    background-image: url('assets/images/background-mobile.png');
+    background-image: url('design/mobile/desing_original.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -466,7 +466,7 @@ body {
     background-color: rgba(58, 57, 57, 0.3);
     color: white;
     font-size: 3vw;
-    padding-left: 1vw;
+    padding-left: 1.5vw;
   }
 
   .github_username input:focus {
@@ -524,7 +524,7 @@ body {
 /* layout of form desktop view */
 @media (min-width: 601px) {
   body {
-    background-image: url('assets/images/background-mobile.png');
+    background-image: url('design/desktop/desing_original.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
