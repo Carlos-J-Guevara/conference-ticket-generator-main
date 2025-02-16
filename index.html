@@ -26,7 +26,7 @@
       <h2>Upload Avatar</h2>
       <button id="uploadButton">
         <img src="assets/images/icon-upload.svg" alt="icon upload" />
-        <span>Drag and drop or click to upload</span>
+        <span id="dragAndDropMessage">Drag and drop or click to upload</span>
       </button>
       <div id="dropArea"></div>
       <img
@@ -34,13 +34,20 @@
         alt="information icon related rules of upload"
         id="infoiconupload"
       />
-      <h4>Upload your photo (JPG or PNG, max size: 500KB).</h4>
+      <h4 id="intructionsizeofimage">
+        Upload your photo (JPG or PNG, max size: 500KB).
+      </h4>
     </section>
 
     <!-- upload full name -->
     <section class="full_name">
       <h2>Full Name</h2>
-      <input type="text" id="uploadfullnamefield" placeholder="" />
+      <input
+        type="text"
+        id="uploadfullnamefield"
+        placeholder=""
+        autocomplete="off"
+      />
     </section>
 
     <!-- upload email address -->
@@ -50,7 +57,14 @@
         type="text"
         id="uploademailaddress"
         placeholder="example@email.com"
+        autocomplete="off"
       />
+      <img
+        src="assets/images/icon-info.svg"
+        id="iconemailaddress"
+        class="hidden"
+      />
+      <span id="instrutionsemailaddress" class="hidden"></span>
     </section>
 
     <!-- upload github username -->
@@ -60,6 +74,7 @@
         type="text"
         id="uploadgithubusername"
         placeholder="@yourusername"
+        autocomplete="off"
       />
     </section>
 
