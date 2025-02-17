@@ -1,5 +1,3 @@
-// upload avatar
-
 // Interfaces
 interface FileValidation {
   isValid: boolean;
@@ -31,22 +29,35 @@ const avatarUploadGuide: HTMLSpanElement | undefined =
 
 // DOM of email address
 const emailAvatarUploadInput: HTMLInputElement | null =
-  (document.getElementById('uploademailaddress') as HTMLInputElement) || null;
+  (document.getElementById('uploademailaddress') as HTMLInputElement) ||
+  undefined;
 
 const emailIconAvatarUploadInput: HTMLImageElement | null =
-  (document.getElementById('iconemailaddress') as HTMLImageElement) || null;
+  (document.getElementById('iconemailaddress') as HTMLImageElement) ||
+  undefined;
 
 const emailInstructionAvatarUploadInput: HTMLSpanElement | null =
   (document.getElementById('instrutionsemailaddress') as HTMLSpanElement) ||
-  null;
+  undefined;
 
+// DOM of Full name.
+const fullNameAvatarUploadInput: HTMLInputElement | null =
+  (document.getElementById('uploadfullnamefield') as HTMLInputElement) ||
+  undefined;
+
+// DOM of github username.
+const githubUsernameAvatarUploadInput: HTMLInputElement | null =
+  (document.getElementById('uploadgithubusername') as HTMLInputElement) ||
+  undefined;
+
+// upload avatar area of coding.
 // Preview function of upload avatar.
 function createAvatarPreview(file: File): void {
-  const reader = new FileReader();
+  const reader: FileReader = new FileReader();
 
-  reader.onload = e => {
+  reader.onload = (e: ProgressEvent<FileReader>) => {
     if (avatarUploadDropArea && e.target?.result) {
-      const preview = document.createElement('img');
+      const preview: HTMLImageElement = document.createElement('img');
       preview.src = e.target.result as string;
       preview.className = 'avatar-preview';
 
@@ -86,7 +97,7 @@ function validateFile(file: File): FileValidation {
 
 // file managements of upload avatar.
 function handleFile(file: File): void {
-  const validation = validateFile(file);
+  const validation: FileValidation = validateFile(file);
 
   if (userAvatarUploadIcon && avatarUploadInstruction) {
     userAvatarUploadIcon.style.fill = '';
@@ -115,12 +126,12 @@ if (
 ) {
   // Click en botón
   uploadAvatarButton.addEventListener('click', () => {
-    const input = document.createElement('input');
+    const input: HTMLInputElement = document.createElement('input');
     input.type = 'file';
     input.accept = 'image/jpeg, image/png';
     input.click();
     input.onchange = (e: Event) => {
-      const file = (e.target as HTMLInputElement).files?.[0];
+      const file: File | undefined = (e.target as HTMLInputElement).files?.[0];
       if (file) handleFile(file);
     };
   });
@@ -141,7 +152,7 @@ if (
     e.preventDefault();
     avatarUploadDropArea.classList.remove('drag-over');
     avatarUploadGuide.style.display = '';
-    const file = e.dataTransfer?.files[0];
+    const file: File | undefined = e.dataTransfer?.files[0];
     if (file) {
       handleFile(file);
     }
@@ -219,9 +230,113 @@ function handleEmail(email: string): void {
 // Event Listeners of email
 document.addEventListener('DOMContentLoaded', () => {
   if (emailAvatarUploadInput) {
-    emailAvatarUploadInput.addEventListener('input', e => {
+    emailAvatarUploadInput.addEventListener('input', (e: Event) => {
       const email = (e.target as HTMLInputElement).value;
       handleEmail(email);
     });
   }
 });
+
+// From here start full name area of coding (funtional programming).
+
+// Interface for validate full name
+interface FullNameValidation {
+  isValid: boolean;
+  message: string;
+  formattedName?: string;
+}
+
+// function to validate full name
+function validateFullName(fullName: string): FullNameValidation {
+  const cleanedName: string = fullName.trim().replace(/\s+/g, ' ');
+  const namePattern: RegExp = /^[a-zA-ZáéíóúüÁÉÍÓÚÜñÑ\s'-]+$/;
+  if (!cleanedName) {
+    return { isValid: false, message: 'false' };
+  }
+  if (!namePattern.test(cleanedName)) {
+    return {
+      isValid: false,
+      message: 'false'
+    };
+  }
+  const nameParts: string[] = cleanedName.split(' ');
+  if (nameParts.length < 2) {
+    return {
+      isValid: false,
+      message: 'false'
+    };
+  }
+  const formattedName: string = nameParts
+    .map(part => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase())
+    .join(' ');
+
+  return { isValid: true, message: '', formattedName };
+}
+
+// UI management for full name
+function handleFullName(fullName: string): void {
+  const validationFullName: FullNameValidation = validateFullName(fullName);
+  if (fullNameAvatarUploadInput) {
+    if (validationFullName.isValid) {
+      fullNameAvatarUploadInput.style.borderColor = '';
+    } else {
+      fullNameAvatarUploadInput.style.borderColor = '#ff0000';
+    }
+  }
+}
+
+// Event Listeners of full name
+document.addEventListener('DOMContentLoaded', () => {
+  if (fullNameAvatarUploadInput) {
+    fullNameAvatarUploadInput.addEventListener('input', e => {
+      const fullName: string = (e.target as HTMLInputElement).value;
+      handleFullName(fullName);
+    });
+  }
+});
+
+// From here start github username area of coding (funtional programming).
+
+// Interface for validate github username
+interface GithubUsernameValidation {
+  isValid: boolean;
+  message: string;
+}
+
+// function to validate github username
+function validateGithubUsername(username: string): GithubUsernameValidation {
+  const githubUsernamePattern: RegExp =
+    /^@[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$/i;
+  if (!githubUsernamePattern.test(username)) {
+    return {
+      isValid: false,
+      message: 'Please enter a valid GitHub username.'
+    };
+  }
+  return { isValid: true, message: '' };
+}
+
+// UI manegemenent for github username
+function handleGithubUsername(username: string): void {
+  const validationGithubUsername: GithubUsernameValidation =
+    validateGithubUsername(username);
+  if (githubUsernameAvatarUploadInput) {
+    if (validationGithubUsername.isValid) {
+      githubUsernameAvatarUploadInput.style.borderColor = '';
+    } else {
+      githubUsernameAvatarUploadInput.style.borderColor = '#ff0000';
+    }
+  }
+}
+
+// Event Listeners of github username
+document.addEventListener('DOMContentLoaded', () => {
+  if (githubUsernameAvatarUploadInput) {
+    githubUsernameAvatarUploadInput.addEventListener('input', e => {
+      const username: string = (e.target as HTMLInputElement).value;
+      handleGithubUsername(username);
+    });
+  }
+});
+
+// ts to the second page.

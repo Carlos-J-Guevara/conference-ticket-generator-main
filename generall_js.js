@@ -1,5 +1,4 @@
 "use strict";
-// upload avatar
 // global state for all the document
 let savedAvatarFile = null;
 // DOM general
@@ -12,14 +11,23 @@ const avatarUploadInstruction = document.getElementById('intructionsizeofimage')
 const avatarUploadGuide = document.getElementById('dragAndDropMessage') ||
     undefined;
 // DOM of email address
-const emailAvatarUploadInput = document.getElementById('uploademailaddress') || null;
-const emailIconAvatarUploadInput = document.getElementById('iconemailaddress') || null;
+const emailAvatarUploadInput = document.getElementById('uploademailaddress') ||
+    undefined;
+const emailIconAvatarUploadInput = document.getElementById('iconemailaddress') ||
+    undefined;
 const emailInstructionAvatarUploadInput = document.getElementById('instrutionsemailaddress') ||
-    null;
+    undefined;
+// DOM of Full name.
+const fullNameAvatarUploadInput = document.getElementById('uploadfullnamefield') ||
+    undefined;
+// DOM of github username.
+const githubUsernameAvatarUploadInput = document.getElementById('uploadgithubusername') ||
+    undefined;
+// upload avatar area of coding.
 // Preview function of upload avatar.
 function createAvatarPreview(file) {
     const reader = new FileReader();
-    reader.onload = e => {
+    reader.onload = (e) => {
         var _a;
         if (avatarUploadDropArea && ((_a = e.target) === null || _a === void 0 ? void 0 : _a.result)) {
             const preview = document.createElement('img');
@@ -165,9 +173,88 @@ function handleEmail(email) {
 // Event Listeners of email
 document.addEventListener('DOMContentLoaded', () => {
     if (emailAvatarUploadInput) {
-        emailAvatarUploadInput.addEventListener('input', e => {
+        emailAvatarUploadInput.addEventListener('input', (e) => {
             const email = e.target.value;
             handleEmail(email);
         });
     }
 });
+// function to validate full name
+function validateFullName(fullName) {
+    const cleanedName = fullName.trim().replace(/\s+/g, ' ');
+    const namePattern = /^[a-zA-ZáéíóúüÁÉÍÓÚÜñÑ\s'-]+$/;
+    if (!cleanedName) {
+        return { isValid: false, message: 'false' };
+    }
+    if (!namePattern.test(cleanedName)) {
+        return {
+            isValid: false,
+            message: 'false'
+        };
+    }
+    const nameParts = cleanedName.split(' ');
+    if (nameParts.length < 2) {
+        return {
+            isValid: false,
+            message: 'false'
+        };
+    }
+    const formattedName = nameParts
+        .map(part => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase())
+        .join(' ');
+    return { isValid: true, message: '', formattedName };
+}
+// UI management for full name
+function handleFullName(fullName) {
+    const validationFullName = validateFullName(fullName);
+    if (fullNameAvatarUploadInput) {
+        if (validationFullName.isValid) {
+            fullNameAvatarUploadInput.style.borderColor = '';
+        }
+        else {
+            fullNameAvatarUploadInput.style.borderColor = '#ff0000';
+        }
+    }
+}
+// Event Listeners of full name
+document.addEventListener('DOMContentLoaded', () => {
+    if (fullNameAvatarUploadInput) {
+        fullNameAvatarUploadInput.addEventListener('input', e => {
+            const fullName = e.target.value;
+            handleFullName(fullName);
+        });
+    }
+});
+// function to validate github username
+function validateGithubUsername(username) {
+    const githubUsernamePattern = /^@[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$/i;
+    if (!githubUsernamePattern.test(username)) {
+        return {
+            isValid: false,
+            message: 'Please enter a valid GitHub username.'
+        };
+    }
+    return { isValid: true, message: '' };
+}
+// UI manegemenent for github username
+function handleGithubUsername(username) {
+    const validationGithubUsername = validateGithubUsername(username);
+    if (githubUsernameAvatarUploadInput) {
+        if (validationGithubUsername.isValid) {
+            githubUsernameAvatarUploadInput.style.borderColor = '';
+        }
+        else {
+            githubUsernameAvatarUploadInput.style.borderColor = '#ff0000';
+        }
+    }
+}
+// Event Listeners of github username
+document.addEventListener('DOMContentLoaded', () => {
+    if (githubUsernameAvatarUploadInput) {
+        githubUsernameAvatarUploadInput.addEventListener('input', e => {
+            const username = e.target.value;
+            handleGithubUsername(username);
+        });
+    }
+});
+// ts to the second page.
