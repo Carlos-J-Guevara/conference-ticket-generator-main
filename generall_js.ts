@@ -5,6 +5,7 @@ interface FileValidation {
 }
 
 // global state for all the document
+
 let savedAvatarFile: File | null = null;
 
 // DOM general
@@ -50,6 +51,10 @@ const githubUsernameAvatarUploadInput: HTMLInputElement | null =
   (document.getElementById('uploadgithubusername') as HTMLInputElement) ||
   undefined;
 
+// DOM of generate botom
+const generateButtonticket: HTMLButtonElement | undefined =
+  (document.getElementById('generatebutton') as HTMLButtonElement) || undefined;
+
 // upload avatar area of coding.
 // Preview function of upload avatar.
 function createAvatarPreview(file: File): void {
@@ -60,8 +65,8 @@ function createAvatarPreview(file: File): void {
       const preview: HTMLImageElement = document.createElement('img');
       preview.src = e.target.result as string;
       preview.className = 'avatar-preview';
-
-      // Limpiar y añadir preview
+      sessionStorage.setItem('avatarPreview', e.target.result as string);
+      // clean and add preview
       avatarUploadDropArea.innerHTML = '';
       avatarUploadDropArea.appendChild(preview);
     }
@@ -213,6 +218,7 @@ function handleEmail(email: string): void {
       emailIconAvatarUploadInput.style.display = 'none';
       emailInstructionAvatarUploadInput.textContent = '';
       emailAvatarUploadInput.style.borderColor = '#4c4b81';
+      sessionStorage.setItem('email', email);
     } else {
       emailIconAvatarUploadInput.classList.remove('hidden');
       emailIconAvatarUploadInput.style.display = 'block';
@@ -279,6 +285,7 @@ function handleFullName(fullName: string): void {
   if (fullNameAvatarUploadInput) {
     if (validationFullName.isValid) {
       fullNameAvatarUploadInput.style.borderColor = '';
+      sessionStorage.setItem('fullName', fullName);
     } else {
       fullNameAvatarUploadInput.style.borderColor = '#ff0000';
     }
@@ -323,6 +330,7 @@ function handleGithubUsername(username: string): void {
   if (githubUsernameAvatarUploadInput) {
     if (validationGithubUsername.isValid) {
       githubUsernameAvatarUploadInput.style.borderColor = '';
+      sessionStorage.setItem('githubUsername', username);
     } else {
       githubUsernameAvatarUploadInput.style.borderColor = '#ff0000';
     }
@@ -339,4 +347,147 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// ts to the second page.
+// to generate bottom.
+
+// Event Listeners of generate bottom
+document.addEventListener('DOMContentLoaded', () => {
+  if (generateButtonticket) {
+    generateButtonticket.addEventListener('click', e => {
+      e.preventDefault();
+      const isValid = validateAllFields();
+      redirect(isValid);
+    });
+  }
+});
+
+// funtion to be redirected to the second page where the ticket is made.
+function redirect(isValid: boolean): void {
+  if (isValid) {
+    window.location.href = 'result.html';
+    // const datosUsuario: string = JSON.stringify({
+
+    // })
+  } else {
+    if (generateButtonticket) {
+      generateButtonticket.style.border = '3px solid red';
+    }
+  }
+}
+
+// funtion to know if all validations have been true.
+function validateAllFields(): boolean {
+  return (
+    savedAvatarFile !== null &&
+    validateFile(savedAvatarFile).isValid &&
+    validateEmail(emailAvatarUploadInput?.value || '').isValid &&
+    validateFullName(fullNameAvatarUploadInput?.value || '').isValid &&
+    validateGithubUsername(githubUsernameAvatarUploadInput?.value || '').isValid
+  );
+}
+
+// reset the border of the generate button when it´s fine
+document.addEventListener('DOMContentLoaded', () => {
+  if (generateButtonticket && validateAllFields()) {
+    generateButtonticket.style.border = '';
+  }
+});
+
+// ts to result page.
+const dayToday: Date = new Date();
+
+// Date format "DD/MM/YYYY"
+const day: number = dayToday.getDate();
+const month: number = dayToday.getMonth() + 1;
+const year: number = dayToday.getFullYear();
+const dayFormat: string = `${month}/${day}/${year}`;
+
+// location
+const locationOfEvent: string = 'Austin, TX';
+
+// all details joined (date and location).
+const eventDetails: string = `${dayFormat}  /  ${locationOfEvent}`;
+
+// DOM of second page.
+
+// elements to insert into the elements of second page
+const storedPreview = sessionStorage.getItem('avatarPreview');
+const storedFullName = sessionStorage.getItem('fullName');
+const storedEmail = sessionStorage.getItem('email');
+const storedGithubUsername = sessionStorage.getItem('githubUsername');
+
+// DOM of each element into the second page.
+const nameInH1Header: HTMLSpanElement | undefined =
+  (document.getElementById('h1dDinamicName') as HTMLSpanElement) || undefined;
+const emailInH2Header: HTMLSpanElement | undefined =
+  (document.getElementById('h2dDinamicEmail') as HTMLSpanElement) || undefined;
+const dateAndPlaceDiv: HTMLDivElement | undefined =
+  (document.getElementById('dateAndPlace') as HTMLDivElement) || undefined;
+const nameInTicket: HTMLDivElement | undefined =
+  (document.getElementById('nameOfTicket') as HTMLDivElement) || undefined;
+const githubNameDiv: HTMLDivElement | undefined =
+  (document.getElementById('nameOfGithub') as HTMLDivElement) || undefined;
+const serialOfticketDiv: HTMLDivElement | undefined =
+  (document.getElementById('serialOfTicket') as HTMLDivElement) || undefined;
+const previewInTicket: HTMLImageElement | undefined =
+  (document.getElementById(
+    'previsualitationOfownerTicket'
+  ) as HTMLImageElement) || undefined;
+
+// insert the data into the elements of the second page.
+if (nameInH1Header && storedFullName) {
+  const nameParts = storedFullName.split(' ').slice(0, 2);
+  const limitedName = nameParts.join(' ') + '!';
+  nameInH1Header.innerHTML = '';
+  const letters = limitedName.split('');
+  const startingColor = [194, 98, 105];
+  letters.forEach((letter, index) => {
+    const span = document.createElement('span');
+    span.textContent = letter;
+    const colorProgression = `rgb(${Math.min(
+      startingColor[0] + index * 7,
+      255
+    )}, 
+                                   ${Math.min(
+                                     startingColor[1] + index * 7,
+                                     255
+                                   )}, 
+                                   ${Math.min(
+                                     startingColor[2] + index * 7,
+                                     255
+                                   )})`;
+
+    span.style.color = colorProgression;
+    span.style.fontWeight = 'bold';
+    nameInH1Header.appendChild(span);
+  });
+}
+
+if (emailInH2Header && storedEmail) {
+  emailInH2Header.textContent = storedEmail;
+  emailInH2Header.style.color = '#C16269';
+}
+
+if (dateAndPlaceDiv && eventDetails) {
+  dateAndPlaceDiv.textContent = eventDetails;
+}
+
+if (nameInTicket && storedFullName) {
+  const nameParts = storedFullName.split(' ');
+  nameInTicket.textContent = nameParts.slice(0, 2).join(' ');
+}
+
+if (githubNameDiv && storedGithubUsername) {
+  githubNameDiv.textContent =
+    storedGithubUsername.length > 20
+      ? storedGithubUsername.slice(0, 20) + '...'
+      : storedGithubUsername;
+}
+
+if (storedPreview) {
+  previewInTicket.src = storedPreview;
+}
+
+if (serialOfticketDiv) {
+  const randomSerial = `#${Math.floor(10000 + Math.random() * 90000)}`;
+  serialOfticketDiv.textContent = randomSerial;
+}
