@@ -16,11 +16,44 @@ body {
 /* layoout of form mobile view */
 @media only screen and (max-width: 480px) {
   body {
-    background-image: url('design/mobile/desing_original.png');
+    background-image: url('assets/images/desing_original_mobile.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     box-sizing: border-box;
+    min-height: 100vh;
+  }
+
+  /* styles of js */
+  .avatar-preview {
+    border: 1px solid #4c4b81;
+    border-radius: 30%;
+    width: 16%;
+    height: 44%;
+    transform: translate(0, 4.5vw);
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+  }
+
+  section .email_address {
+    position: relative;
+  }
+
+  #iconemailaddress {
+    max-width: 90%;
+    margin-left: 3vw;
+    width: 5vw;
+    transform: translate(0, -0.1em);
+  }
+
+  #instrutionsemailaddress {
+    position: absolute;
+    max-width: 90%;
+    font-size: 2.8vw;
+    color: #b5b4c5;
+    transform: translate(17%, -1.5em);
+    font-family: 'Inconsolata', monospace;
   }
 
   /* styles of header  */
@@ -192,6 +225,10 @@ body {
 
   .email_address input:hover {
     background-color: #1f1e33;
+  }
+
+  .hidden {
+    display: none;
   }
 
   /* styles of github username */
@@ -270,11 +307,44 @@ body {
 /* styles of tablet view */
 @media screen and (min-width: 481px) and (max-width: 600px) {
   body {
-    background-image: url('design/mobile/desing_original.png');
+    background-image: url('assets/images/desing_original_mobile.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     box-sizing: border-box;
+    min-height: 100vh;
+  }
+
+  /* styles of js */
+  .avatar-preview {
+    border: 1px solid #4c4b81;
+    border-radius: 30%;
+    width: 16%;
+    height: 47%;
+    transform: translate(0, 4vw);
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+  }
+
+  section .email_address {
+    position: relative;
+  }
+
+  #iconemailaddress {
+    max-width: 90%;
+    margin-left: 3vw;
+    width: 5vw;
+    transform: translate(0, -0.1em);
+  }
+
+  #instrutionsemailaddress {
+    position: absolute;
+    max-width: 90%;
+    font-size: 2.8vw;
+    color: #b5b4c5;
+    transform: translate(17%, -1.5em);
+    font-family: 'Inconsolata', monospace;
   }
 
   /* styles of header  */
@@ -448,6 +518,10 @@ body {
     background-color: #1f1e33;
   }
 
+  .hidden {
+    display: none;
+  }
+
   /* styles of github username */
   .github_username h2 {
     color: white;
@@ -524,11 +598,46 @@ body {
 /* layout of form desktop view */
 @media (min-width: 601px) {
   body {
-    background-image: url('design/desktop/desing_original.jpeg');
+    background-image: url('assets/images/desing_original_desktop..png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     box-sizing: border-box;
+    min-height: 100vh;
+  }
+
+  /* styles of js */
+  .avatar-preview {
+    border: 1px solid #4c4b81;
+    border-radius: 1vw;
+    width: 3.5vw;
+    height: 3.5vw;
+    transform: translate(0, 1.1vw);
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+  }
+
+  .drag-over {
+    transform: translate(0, 0);
+  }
+
+  section .email_address {
+    position: relative;
+  }
+
+  #iconemailaddress {
+    max-width: 90%;
+    transform: translate(34.5vw, 0.9vw);
+    width: 1vw;
+  }
+
+  #instrutionsemailaddress {
+    position: absolute;
+    width: 50%;
+    color: #b5b4c5;
+    font-size: 0.8vw;
+    left: 36vw;
   }
 
   /* styles of header  */
@@ -593,7 +702,7 @@ body {
     border-radius: 1vw;
     background-color: rgba(108, 108, 108, 0.3);
     width: 3.5vw;
-    transform: translate(0, -1.5vw);
+    transform: translate(0, -1vw);
     padding: 0.6vw;
   }
 
@@ -708,6 +817,10 @@ body {
 
   .email_address input:hover {
     background-color: #1f1e33;
+  }
+
+  .hidden {
+    display: none;
   }
 
   /* styles of github username */

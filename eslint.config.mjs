@@ -5,7 +5,6 @@ import prettier from 'eslint-plugin-prettier';
 import eslintConfigPrettier from 'eslint-config-prettier';
 
 export default defineConfig([
-  // Configuración base para todos los archivos
   {
     ignores: ['node_modules/', 'dist/'],
     files: ['**/*.js'],
@@ -22,10 +21,11 @@ export default defineConfig([
     },
     rules: {
       ...eslintConfigPrettier.rules,
-      'prettier/prettier': 'error'
+      'prettier/prettier': ['error', {
+        endOfLine: 'auto'
+      }]
     }
   },
-  // Configuración específica para TypeScript
   {
     files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
@@ -42,7 +42,9 @@ export default defineConfig([
       ...typescript.configs.recommended.rules,
       ...eslintConfigPrettier.rules,
       '@typescript-eslint/no-explicit-any': 'error',
-      'prettier/prettier': 'error'
+      'prettier/prettier': ['error', {
+        endOfLine: 'auto'
+      }]
     }
   }
 ]);

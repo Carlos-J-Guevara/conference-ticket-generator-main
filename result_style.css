@@ -1,0 +1,335 @@
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('./fonts/Inconsolata-Regular.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Inconsolata', monospace;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* layoout of form mobile view */
+@media only screen and (max-width: 480px) {
+  body {
+    background-image: url('assets/images/desing_original_mobile.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  /* main {
+  } */
+
+  /* styles of js */
+
+  /* styles of header  */
+  header {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header img {
+    width: 50vw;
+    margin: 8vw;
+    margin-top: 15vw;
+  }
+
+  header h1 {
+    color: white;
+    font-size: 7vw;
+    margin: 2vw;
+  }
+
+  header h2 {
+    color: #b5b4c5;
+    margin-top: 4vw;
+    font-size: 4.8vw;
+    margin-bottom: 2vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+
+  /* ticket styles to mobile view */
+  #Capa_1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    width: 95%;
+    opacity: 0.4;
+  }
+
+  #logoatticket {
+    display: block;
+    width: 50vw;
+    transform: translate(-18vw, -55vw);
+    margin-left: 2vw;
+    box-sizing: border-box;
+  }
+
+  #dateAndPlace {
+    color: white;
+    transform: translate(-4.6vw, -54vw);
+    font-size: 3vw;
+  }
+
+  #nameOfTicket {
+    color: white;
+    transform: translate(-0.5vw, -40vw);
+    font-size: 5vw;
+  }
+
+  #nameOfGithub {
+    color: white;
+    transform: translate(-0.5vw, -39vw);
+    font-size: 3.5vw;
+  }
+
+  #serialOfTicket {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    transform: translate(63vw, -65vw);
+    font-size: 5vw;
+    writing-mode: vertical-rl;
+  }
+
+  #previsualitationOfownerTicket {
+    width: 14vw;
+    height: 14vw;
+    transform: translate(-18vw, -68vw);
+    border-radius: 1vw;
+  }
+}
+
+/* styles of tablet view */
+@media screen and (min-width: 481px) and (max-width: 600px) {
+  body {
+    background-image: url('assets/images/desing_original_mobile.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  /* styles of js */
+
+  /* styles of header  */
+  header {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header img {
+    width: 50vw;
+    margin: 8vw;
+    margin-top: 15vw;
+  }
+
+  header h1 {
+    color: white;
+    font-size: 7vw;
+    margin: 2vw;
+  }
+
+  header h2 {
+    color: #b5b4c5;
+    margin-top: 4vw;
+    font-size: 4.8vw;
+    margin-bottom: 2vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+
+  /* ticket styles to mobile view */
+  #Capa_1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    width: 95%;
+    opacity: 0.4;
+  }
+
+  #logoatticket {
+    display: block;
+    width: 50vw;
+    transform: translate(-18vw, -55vw);
+    margin-left: 2vw;
+    box-sizing: border-box;
+  }
+
+  #dateAndPlace {
+    color: white;
+    transform: translate(-4.6vw, -54vw);
+    font-size: 3vw;
+  }
+
+  #nameOfTicket {
+    color: white;
+    transform: translate(-0.5vw, -40vw);
+    font-size: 5vw;
+  }
+
+  #nameOfGithub {
+    color: white;
+    transform: translate(-0.5vw, -39vw);
+    font-size: 3.5vw;
+  }
+
+  #serialOfTicket {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    transform: translate(63vw, -65vw);
+    font-size: 5vw;
+    writing-mode: vertical-rl;
+  }
+
+  #previsualitationOfownerTicket {
+    width: 14vw;
+    height: 14vw;
+    transform: translate(-18vw, -68vw);
+    border-radius: 1vw;
+  }
+}
+
+/* layout of form desktop view */
+@media (min-width: 601px) {
+  body {
+    background-image: url('assets/images/desing_original_desktop..png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  /* styles of js */
+
+  /* styles of header  */
+  header {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header img {
+    width: 18vw;
+    margin: 8vw;
+    margin-bottom: 3vw;
+    margin-top: 4vw;
+  }
+
+  header h1 {
+    color: white;
+    font-size: 5vw;
+    max-width: 60vw;
+    margin: 2vw;
+    margin-bottom: 0;
+  }
+
+  header h2 {
+    color: #b5b4c5;
+    margin-top: 2vw;
+    font-size: 2.5vw;
+    margin-bottom: 2vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    max-width: 60%;
+  }
+
+  header h1 span {
+    transition: color 0.3s ease-in-out;
+  }
+
+  #Capa_1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7%;
+    margin-bottom: 15%;
+    width: 50%;
+    opacity: 0.4;
+  }
+
+  #logoatticket {
+    display: block;
+    width: 30vw;
+    transform: translate(-8.5vw, -36vw);
+    margin-left: 2vw;
+    box-sizing: border-box;
+  }
+
+  #dateAndPlace {
+    color: white;
+    transform: translate(0, -35vw);
+    font-size: 1.5vw;
+  }
+
+  #nameOfTicket {
+    color: white;
+    transform: translate(3vw, -30vw);
+    font-size: 3vw;
+  }
+
+  #nameOfGithub {
+    color: white;
+    transform: translate(3vw, -29vw);
+    font-size: 1.5vw;
+  }
+
+  #serialOfTicket {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    transform: translate(36vw, -41vw);
+    font-size: 2.5vw;
+    writing-mode: vertical-rl;
+  }
+
+  #previsualitationOfownerTicket {
+    width: 8vw;
+    height: 8vw;
+    transform: translate(-7vw, -44vw);
+    border-radius: 1vw;
+  }
+}
